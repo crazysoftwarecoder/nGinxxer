@@ -15,9 +15,12 @@ $ mvn clean compile assembly:single
 $ java -jar target/nginxxer.jar <input_json> <output_json>
 ```
 
-Example: java -jar target/nginxxer.jar src/test/resources/com/myseriousorganization/nginx/sample_input.json /tmp/nginx.conf
+Example 
+```
+$ java -jar target/nginxxer.jar src/test/resources/com/myseriousorganization/nginx/sample_input.json /tmp/nginx.conf
+```
 
-## Sample JSON format
+## Example JSON Input
 
 https://raw.githubusercontent.com/crazysoftwarecoder/nGinxxer/master/src/test/resources/com/myseriousorganization/nginx/sample_input.json
 

@@ -24,9 +24,9 @@
     </developer>
   </developers>
   <scm>
-    <connection>scm:git:git@github.com:example/example-application.git</connection>
-    <developerConnection>scm:git:git@github.com:example/example-application.git</developerConnection>
-    <url>git@github.com:example/example-application.git</url>
+    <connection>scm:git:git@github.com:crazysoftwarecoder/nGinxxer.git</connection>
+    <developerConnection>scm:git:git@github.com:crazysoftwarecoder/nGinxxer.git</developerConnection>
+    <url>https://github.com/crazysoftwarecoder/nGinxxer</url>
   </scm>
 
   <properties>

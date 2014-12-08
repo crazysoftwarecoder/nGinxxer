@@ -9,10 +9,11 @@ Takes a JSON as input and outputs formatted nGinx configuration. Flexible JSON s
 nGinxxer.getNGinxConfigurationString(String jsonString)
 
 ## CLI
-
-mvn clean compile assembly:single
+```
+$ mvn clean compile assembly:single
 
 java -jar target/nginxxer.jar <input_json> <output_json>
+```
 
 Example: java -jar target/nginxxer.jar src/test/resources/com/myseriousorganization/nginx/sample_input.json /tmp/nginx.conf
 

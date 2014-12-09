@@ -29,30 +29,16 @@ public class TemplateGeneratorTest {
         templateGenerator = TemplateGenerator.getInstance();
     }
 
-    private static List<String> stringToLines(String inputString) {
-        List<String> lines = new LinkedList<String>();
-        String line = "";
-        try {
-            BufferedReader in = new BufferedReader(new StringReader(inputString));
-            while ((line = in.readLine()) != null) {
-                lines.add(line);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return lines;
-    }
-
     @Test
     public void testNGinxOutput() {
         JSONObject jsonObject = TestUtil.getJSONObject("/com/myseriousorganization/nginx/sample_input.json");
         try {
             String nGinxConf = templateGenerator.generateTemplate(jsonObject);
             nGinxConf = nGinxConf.trim();
-            List<String> generatedNginxConfLines = stringToLines(nGinxConf);
+            List<String> generatedNginxConfLines = TestUtil.stringToLines(nGinxConf);
             String actualNGinxConf = IOUtils.toString(getClass().getResourceAsStream("/com/myseriousorganization/nginx/sample_nginx.conf"));
             actualNGinxConf = actualNGinxConf.trim();
-            List<String> actualNGinxConfLines = stringToLines(actualNGinxConf);
+            List<String> actualNGinxConfLines = TestUtil.stringToLines(actualNGinxConf);
             Patch patch = DiffUtils.diff(generatedNginxConfLines, actualNGinxConfLines);
             Assert.assertTrue("Source and generated nGinx conf have differences:=" + patch.getDeltas().size(), patch.getDeltas().size()==0);
         }

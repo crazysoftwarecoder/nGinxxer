@@ -12,7 +12,7 @@ nGinxxer.getNGinxConfigurationString(String jsonString)
 ```
 $ mvn clean compile assembly:single
 
-$ java -jar target/nginxxer.jar <input_json> <output_json>
+$ java -jar target/nginxxer.jar <input_json> <output_nginx_conf>
 ```
 
 Example 
